@@ -9,7 +9,7 @@ const generateToken = (id) => {
 // @desc    Register user
 // @route   POST /api/users/register
 export const registerUser = async (req, res) => {
-  console.log("Req body:", req.body); // <-- debug
+  // console.log("Req body:", req.body); // <-- debug
   const { name, email, password } = req.body;
 
   try {
@@ -54,5 +54,3 @@ export const loginUser = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
-
